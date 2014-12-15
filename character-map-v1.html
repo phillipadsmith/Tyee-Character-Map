@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="/bower_components/underscore/underscore.js"></script>
-    <script type="text/javascript" src="/bower_components/backbone/backbone.js"></script>
-    <script type="text/javascript" src="/bower_components/tabletop/src/backbone.tabletopSync.js"></script>
-    <script type="text/javascript" src="/bower_components/tabletop/src/tabletop.js"></script>
+    <script type="text/javascript" src="{{ "bower_components/jquery/dist/jquery.js" | prepend: site.baseurl  }}"></script>
+    <script type="text/javascript" src="{{ "bower_components/underscore/underscore.js" | prepend: site.baseurl  }}"></script>
+    <script type="text/javascript" src="{{ "bower_components/backbone/backbone.js" | prepend: site.baseurl  }}"></script>
+    <script type="text/javascript" src="{{ "/bower_components/tabletop/src/backbone.tabletopSync.js" | prepend: site.baseurl  }}"></script>
+    <script type="text/javascript" src="{{ "bower_components/tabletop/src/tabletop.js " | prepend: site.baseurl  }}"></script>
     <link rel="stylesheet" href="{{ "ui/css/character-map.css" | prepend: site.baseurl }}">
     <script id="person-template" type="text/underscore-template">
     <div class="entry">
