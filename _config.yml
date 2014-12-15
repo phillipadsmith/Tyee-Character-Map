@@ -1,7 +1,7 @@
 # Site settings
 title: Tyee Character Map 
 email: ps@phillipadsmith.com 
-baseurl: "/Tyee-Character-Map/" # the subpath of your site, e.g. /blog/
+baseurl: "/Tyee-Character-Map" # the subpath of your site, e.g. /blog/
 url: "http://phillipadsmith.github.io" # the base hostname & protocol for your site
 twitter_username: phillipadsmith
 github_username: phillipadsmith
