@@ -1,0 +1,27 @@
+{
+  "name": "tyee-character-map",
+  "version": "0.0.1",
+  "authors": [
+    "Phillip Smith <ps@phillipadsmith.com>"
+  ],
+  "description": "Tyee Character Map",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "pym.js": "~0.3.1",
+    "jquery": "~2.1.1",
+    "tabletop": "~1.4.0"
+  },
+  "resolutions": {
+    "pym.js": "~0.4.1"
+  }
+}

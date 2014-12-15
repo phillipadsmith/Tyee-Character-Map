@@ -1,0 +1,56 @@
+---
+layout: default
+---
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="/bower_components/backbone/backbone.js"></script>
+    <script type="text/javascript" src="/bower_components/tabletop/src/backbone.tabletopSync.js"></script>
+    <script type="text/javascript" src="/bower_components/tabletop/src/tabletop.js"></script>
+    <link rel="stylesheet" href="{{ "ui/css/character-map.css" | prepend: site.baseurl }}">
+    <script id="person-template" type="text/underscore-template">
+    <div class="entry">
+        <div class="photo">
+            <img class="person-photo" src="/ui/img/<%= image %>-large.jpg"> 
+            <span class="credit">
+            <% if (photocredit) { %>
+                Photo: <%= photocredit %>
+             <% }; %>
+            </span>
+        </div>
+        <div class="text">
+        <h3 class="<%= groupid %>"><%= group %></h3>
+            <h2><%= firstname %> <%= lastname %></h2>
+            <p class="organizations"><%= organization %></p>
+            <p class="person-role">
+              <%= role %>
+            </p>
+        </div>
+    </div>
+    </script>
+    <script id="people-template" type="text/underscore-template">
+    <% _.each(characters, function(person) { %>
+              <div class="character <%= person.groupid %>">
+        <img class="person-photo" data-person="<%= person.name %>" src="/ui/img/<%= person.image %>-small.jpg"> 
+    </div>
+    <% }); %>
+    <br clear="all" />
+    </script>
+    <div id="character-map">
+        <div id="character-gallery">
+        </div>
+        <div id="character-spotlight">
+        </div>
+    </div>
+    <script type="text/javascript" src="/ui/js/character-map.js"></script>
+     <script type="text/javascript">
+      $(document).ready( function() {
+            App.characters = new App.CharacterCollection();
+            App.characters.fetch({ success: showInfo });
+            function showInfo(characters) {
+                App.characters_view = new App.CharactersView({ collection: App.characters });
+                $("#character-gallery").append( App.characters_view.render().el );
+                // Focus on the first character in the gallery
+                $('#character-gallery .person-photo')[0].click();
+            };
+        });
+    </script>
