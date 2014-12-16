@@ -22,6 +22,7 @@ body {
 }
 #character-spotlight .text {
     float: left;
+    padding-top: 20px;
     width: 230px;
 }
 
@@ -29,7 +30,10 @@ body {
     text-transform: uppercase;
     font-size: 0.8em;
 }
-#character-spotlight p {
+
+#character-spotlight h2 {
+    line-height: 0px;
+    margin-bottom: 20px;
 }
 
 .character.whistleblower {
