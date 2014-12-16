@@ -21,7 +21,7 @@ App.Character = Backbone.Model.extend({
         var name = self.get('name');
         var gender = self.get('gender');
         $.ajax({
-            url:'{{ "/ui/img/" | prepend: site.baseurl }}' + name + '-small.jpg',
+            url:'{{ "/ui/img/" | prepend: site.baseurl }}' + name + '-small.png',
             type:'HEAD',
             error: function()
             {
