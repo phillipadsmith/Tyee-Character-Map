@@ -12,6 +12,7 @@ body {
 
 .character {
     float: left;
+    cursor: pointer;
 }
 
 #character-spotlight .photo {
