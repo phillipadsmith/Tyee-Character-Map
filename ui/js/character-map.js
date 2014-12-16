@@ -1,3 +1,5 @@
+---
+---
 window.App = {};
 App.public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1OdhbHZ8jnGZ4lvUAfNrgGCZjpnWcaVuFhtJp3LR6qps/pubhtml';
 App.storage = Tabletop.init( { key: App.public_spreadsheet_url, wait: true } );
@@ -19,7 +21,7 @@ App.Character = Backbone.Model.extend({
         var name = self.get('name');
         var gender = self.get('gender');
         $.ajax({
-            url:'/ui/img/' + name + '-small.jpg',
+            url:'{{ "/ui/img/" | prepend: site.baseurl }}' + name + '-small.jpg',
             type:'HEAD',
             error: function()
             {
