@@ -15,14 +15,35 @@ body {
     cursor: pointer;
 }
 
+#character-gallery {
+    float: right;
+    width: 486px;
+    position: relative;
+    top: -42px;
+}
+
+.character img.active {
+    opacity: 0.2;
+}
+
+#character-spotlight  {
+    float: left;
+}
+#character-spotlight .entry {
+    float: left;
+    width: 500px;
+}
+
 #character-spotlight .photo {
     float: left;
     width: 200px;
     margin-right: 20px;
+    height: 200px;
+    overflow: hidden;
 }
+
 #character-spotlight .text {
     float: left;
-    padding-top: 20px;
     width: 230px;
 }
 
@@ -34,25 +55,23 @@ body {
 #character-spotlight h2 {
     line-height: 0px;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
-.character.whistleblower {
+.character.whistleblower, h3.whistleblower  {
     border-bottom: 4px solid blue;
 }
 
-h3.whistleblower { 
-}
-
-.character.fired {
+.character.fired, h3.fired {
     border-bottom: 4px solid red;
 }
-.character.bureaucrats {
+.character.bureaucrats, h3.bureaucrats {
     border-bottom: 4px solid orange;
 }
-.character.politicians {
+.character.politicians, h3.politicians {
     border-bottom: 4px solid yellow;
 }
-.character.investigators {
+.character.investigators, h3.investigators {
     border-bottom: 4px solid grey;
 }
 

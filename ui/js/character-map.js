@@ -74,6 +74,8 @@ App.CharactersView = Backbone.View.extend({
     },
     showCharacter: function(event) {
         if ( event.currentTarget.dataset.person ) {
+            $('img.active').toggleClass("active");
+            $( event.currentTarget ).toggleClass("active");
             var person = event.currentTarget.dataset.person;
             App.person_view = new App.CharacterView({ model: App.characters.get(person) });
             $("#character-spotlight div").remove();
