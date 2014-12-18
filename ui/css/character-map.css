@@ -18,8 +18,7 @@ body {
 #character-gallery {
     float: right;
     width: 486px;
-    position: relative;
-    top: -42px;
+    margin-top: 5px;
 }
 
 .character img.active {
@@ -59,20 +58,20 @@ body {
 }
 
 .character.whistleblower, h3.whistleblower  {
-    border-bottom: 4px solid blue;
+    border-bottom: 4px solid purple;
 }
 
 .character.fired, h3.fired {
     border-bottom: 4px solid red;
 }
 .character.bureaucrats, h3.bureaucrats {
-    border-bottom: 4px solid orange;
+    border-bottom: 4px solid grey;
 }
 .character.politicians, h3.politicians {
-    border-bottom: 4px solid yellow;
+    border-bottom: 4px solid #ccc;
 }
 .character.investigators, h3.investigators {
-    border-bottom: 4px solid grey;
+    border-bottom: 4px solid blue;
 }
 
 /*bureaucrats*/
