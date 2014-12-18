@@ -3,5 +3,9 @@ layout: default
 ---
 
 <div class="home">
-    <iframe src="{{ "character-map-v1.html" | prepend: base.url }}" style="width:100%; height: 290px; border: none;" />
+    <small>    <p>To embed the character map, use the iframe embed code below:</p>
+        &lt;iframe src="{{ "/character-map-v1.html" | prepend: site.baseurl | prepend: site.url }}" style="width:100%; height: 290px; border: none;"&gt;&lt;/iframe&gt;
+    </small>
+    <hr />
+        <iframe src="character-map-v1.html" style="width:100%; height: 290px; border: none;"></iframe>
 </div>
