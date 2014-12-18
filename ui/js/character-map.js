@@ -6,7 +6,8 @@ App.storage = Tabletop.init( { key: App.public_spreadsheet_url, wait: true } );
 App.Character = Backbone.Model.extend({
     idAttribute: 'name',
     defaults: {
-        "image": ""  
+        "image": "",
+        "active": "" 
     },
     tabletop: {
         instance: App.storage,
@@ -73,14 +74,21 @@ App.CharactersView = Backbone.View.extend({
         this.listenTo(this.collection, "change", this.render);
     },
     showCharacter: function(event) {
+        if ( App.ActivePerson ) {
+            // Set the current person to inactive in the lineup
+            App.ActivePerson.set('active','');
+        }
         if ( event.currentTarget.dataset.person ) {
-            $('img.active').toggleClass("active");
-            $( event.currentTarget ).toggleClass("active");
-            var person = event.currentTarget.dataset.person;
-            App.person_view = new App.CharacterView({ model: App.characters.get(person) });
-            $("#character-spotlight div").remove();
+            var pid = event.currentTarget.dataset.person;
+            var person = App.characters.get(pid);
+            App.ActivePerson = person;
+            person.set('active','active');
+            if ( App.person_view ) {
+                // Remove the current view before adding another
+                App.person_view.remove();
+            }
+            App.person_view = new App.CharacterView({ model: person });
             $("#character-spotlight").append( App.person_view.render().el );
         }
-
     }
 });

@@ -25,7 +25,7 @@ layout: default
     <script id="people-template" type="text/underscore-template">
     <% _.each(characters, function(person) { %>
               <div class="character <%= person.groupid %>">
-              <img class="person-photo" data-person="<%= person.name %>" src="{{ "/ui/img/<%= person.image %>-small.png" | prepend: site.baseurl }}"> 
+              <img class="person-photo <%= person.active %>" data-person="<%= person.name %>" src="{{ "/ui/img/<%= person.image %>-small.png" | prepend: site.baseurl }}"> 
     </div>
     <% }); %>
     <br clear="all" />
